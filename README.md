@@ -52,7 +52,7 @@ irelay --help
 ## Module Usage
 
 ```javascript
-var usbmux = require('usbmux');
+import * as usbmux from 'usbmux';
 
 // usbmux.Relay()
 // usbmux.createListener()
@@ -278,7 +278,7 @@ The `Number` field indicates status. 0 is success, other numbers indicate an err
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Sterling DeMille &lt;sterlingdemille@gmail.com&gt;
+Copyright (c) 2015-2025 Sterling DeMille &lt;sterlingdemille@gmail.com&gt;, Maksim Alzhanov &lt;me@alzhanov.ru&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

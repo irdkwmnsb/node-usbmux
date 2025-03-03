@@ -1,6 +1,6 @@
 {
-  "name": "usbmux",
-  "version": "0.1.0",
+  "name": "@irdk/usbmux",
+  "version": "0.2.0",
   "description": "iOS usbmuxd client library",
   "main": "./dist/usbmux.cjs",
   "module": "./dist/usbmux.js",
@@ -8,6 +8,9 @@
   "type": "module",
   "bin": {
     "irelay": "./bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "tsup": {
     "entry": [
@@ -36,14 +39,20 @@
     "ios",
     "irelay"
   ],
-  "author": {
-    "name": "Sterling DeMille",
-    "email": "sterlingdemille+npm@gmail.com"
-  },
+  "contributors": [
+    {
+      "name": "Sterling DeMille",
+      "email": "sterlingdemille+npm@gmail.com"
+    },
+    {
+      "name": "Maksim Alzhanov",
+      "email": "me@alzhanov.ru"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/demille/node-usbmux.git"
+    "url": "https://github.com/irdkwmnsb/node-usbmux.git"
   },
   "dependencies": {
     "debug": "^4.3.6",

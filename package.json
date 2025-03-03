@@ -2,12 +2,34 @@
   "name": "usbmux",
   "version": "0.1.0",
   "description": "iOS usbmuxd client library",
-  "main": "./lib/usbmux.js",
+  "main": "./dist/usbmux.cjs",
+  "module": "./dist/usbmux.js",
+  "types": "./dist/usbmux.d.ts",
+  "type": "module",
   "bin": {
     "irelay": "./bin/cli.js"
   },
+  "tsup": {
+    "entry": [
+      "./lib/usbmux.ts"
+    ],
+    "target": [
+      "node18",
+      "es2020"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  },
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./test/tests.js"
+    "test": "./node_modules/.bin/mocha ./test/tests.cjs",
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "keywords": [
     "usbmuxd",
@@ -26,12 +48,16 @@
   "dependencies": {
     "debug": "^4.3.6",
     "plist": "^3.1.0",
-    "q": "^1.5.1",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/plist": "^3.0.5",
     "mocha": "^10.7.0",
     "rewire": "^7.0.0",
-    "should": "^13.2.3"
-  }
+    "should": "^13.2.3",
+    "tsup": "^8.0.1",
+    "typescript": "^5.8.2"
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
